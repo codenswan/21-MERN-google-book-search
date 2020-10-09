@@ -13,6 +13,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"axios": "^0.20.0",
 		"compression": "^1.7.4",
 		"concurrently": "^5.3.0",
 		"express": "^4.17.1",
@@ -20,5 +21,13 @@
 		"morgan": "^1.10.0",
 		"nodemon": "^2.0.4"
 	},
-	"c": "proxy"
+	"c": "proxy",
+	"devDependencies": {
+		"eslint": "^7.10.0",
+		"eslint-config-airbnb": "^18.2.0",
+		"eslint-plugin-import": "^2.22.1",
+		"eslint-plugin-jsx-a11y": "^6.3.1",
+		"eslint-plugin-react": "^7.21.3",
+		"eslint-plugin-react-hooks": "^4.1.2"
+	}
 }
