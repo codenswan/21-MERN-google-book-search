@@ -3,6 +3,10 @@
 	"version": "1.0.0",
 	"description": "Search google books api and save selected books to mongo db",
 	"main": "server.js",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:codenswan/21-MERN-google-book-search.git"
+	},
 	"scripts": {
 		"start": "npx if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
 		"start:prod": "node server.js",
@@ -22,13 +26,5 @@
 		"morgan": "^1.10.0",
 		"nodemon": "^2.0.4"
 	},
-	"c": "proxy",
-	"devDependencies": {
-		"eslint": "^7.10.0",
-		"eslint-config-airbnb": "^18.2.0",
-		"eslint-plugin-import": "^2.22.1",
-		"eslint-plugin-jsx-a11y": "^6.3.1",
-		"eslint-plugin-react": "^7.21.3",
-		"eslint-plugin-react-hooks": "^4.1.2"
-	}
+	"c": "proxy"
 }
