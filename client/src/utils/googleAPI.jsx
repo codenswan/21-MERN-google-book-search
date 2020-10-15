@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export default {
-  searchGoogleBooks: async function (query) {
+  searchGoogleBooks: async (query) => {
     const bookResults = await axios.get(
       `/api/search?title=${query}`
     );
