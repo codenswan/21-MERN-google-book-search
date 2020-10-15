@@ -30,9 +30,8 @@ export default function Search() {
     searchGoogleBooksAPI(searchTerm);
   };
 
-  const handleSaveBtn = (bookData) => {
-    // await API.saveBook(bookData);
-    console.log(bookData);
+  const handleSaveBtn = async (bookData) => {
+    await API.saveBook(bookData);
   }
 
   return (
