@@ -3,7 +3,8 @@ const logger = require('morgan');
 const compression = require('compression');
 const mongoose = require('mongoose');
 require('dotenv').config();
-const router = require('./routes/api');
+const routes = require('./routes');
+const gRoutes = require('./routes/googleAPI');
 
 //* middleware
 const app = express();
@@ -34,8 +35,8 @@ mongodb.on('error', console.error.bind(console, 'connection error:'));
 mongodb.once('open', () => console.log('Connected to database.'));
 
 //* Link API Routes here
-app.use('/api', router);
-
+app.use('/api', gRoutes);
+app.use(routes);
 
 //* port config
 const PORT = process.env.PORT || 3001;
