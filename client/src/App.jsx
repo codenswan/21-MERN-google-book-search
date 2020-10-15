@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Saved from './pages/Saved.jsx';
 import Search from './pages/Search';
-// import NoMatch from "./pages/NoMatch"
+import NoMatch from "./pages/NoMatch"
 import './App.css';
 
 export default function App() {
@@ -15,6 +15,9 @@ export default function App() {
           </Route>
           <Route exact path={['/', '/saved']}>
             <Saved />
+          </Route>
+          <Route>
+            <NoMatch />
           </Route>
         </Switch>
       </div>
