@@ -7,7 +7,7 @@ export default function BooksTable(props) {
       {props.books.map((book) => (
         <Card key={book.ID}>
           <Card.Header>
-            <Card.Img src={book.Image} style={{ width: '18rem' }} />
+            <Card.Img src={book.Image} style={{ width: '10rem' }} />
           </Card.Header>
           <Card.Body>
             <Card.Title>
