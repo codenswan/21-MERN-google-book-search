@@ -2,29 +2,29 @@ let mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let booksSchema = new Schema({
-  Title: {
+  Author: {
+    type: Array,
+  },
+  Description: {
+    type: String,
+  },
+  ID: {
+    type: String,
+  },
+  Image: {
+    type: String,
+  },
+  Link: {
     type: String,
   },
   Subtitle: {
     type: String,
   },
-  Author: {
-    type: String
+  Title: {
+    type: String,
   },
-  Description: {
-    type: String
-  },
-  Image: {
-    type: String
-  },
-  ID: {
-    type: String
-  },
-  Link: {
-    type: String
-  }
 });
 
 const Book = mongoose.model('Book', booksSchema);
 
-module.exports = Book
+module.exports = Book;
