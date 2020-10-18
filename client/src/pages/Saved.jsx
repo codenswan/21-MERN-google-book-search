@@ -19,11 +19,9 @@ const SavedPage = () => {
   };
 
   const deleteButton = async (id) => {
-    console.log(id);
     try {
       await API.deleteBook(id);
       fetchSavedBooks();
-      console.log("You deleted a book");
     } catch (error) {
       console.log(error);
     }
