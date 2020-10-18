@@ -12,9 +12,18 @@ module.exports = {
   findAll: async (req, res) => {
     try {
       const dbModel = await db.Book.find({});
-      res.status(422).json(dbModel);
+      res.status(200).json(dbModel);
     } catch (error) {
       res.status(422).json(error);
     }
   },
+  remove: async (req, res) => {
+    try {
+      const dbModel = await db.Book.findById({ _id: req.params.id });
+      dbModel.remove();
+      res.status(200).json(dbModel);
+    } catch (error) {
+      res.status(422).json(error);
+    }
+  }
 };
