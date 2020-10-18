@@ -1,9 +1,8 @@
 import React from 'react';
 import { Button, ButtonGroup, Card, Container } from 'react-bootstrap';
-import './styles.css'
+import './styles.css';
 
 const BooksTable = (props) => {
-
   return (
     <Container fluid>
       {props.books.map((book) => (
@@ -15,8 +14,8 @@ const BooksTable = (props) => {
             <Card.Title>
               {book.Title}: <Card.Subtitle>{book.Subtitle}</Card.Subtitle>
             </Card.Title>
-            <Card.Text> Author: {book.Author}</Card.Text>
-            <Card.Text> Desciption: {book.Description} </Card.Text>
+            <Card.Text>Author: {book.Author}</Card.Text>
+            <Card.Text>Desciption: {book.Description} </Card.Text>
           </Card.Body>
           <ButtonGroup>
             {book._id ? (
@@ -28,6 +27,9 @@ const BooksTable = (props) => {
                 >
                   Delete
                 </Button>
+                <Button variant="link" target="_blank" href={book.Link}>
+                  View Details
+                </Button>
               </div>
             ) : (
               <div>
@@ -38,11 +40,11 @@ const BooksTable = (props) => {
                 >
                   Save
                 </Button>
+                <Button variant="link" target="_blank" href={book.Link}>
+                  View Details
+                </Button>
               </div>
             )}
-            <Button variant="link" target="_blank" href={book.Link}>
-              View Details
-            </Button>
           </ButtonGroup>
         </Card>
       ))}
