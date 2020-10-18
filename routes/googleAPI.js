@@ -16,7 +16,7 @@ router.get('/search', async (req, res) => {
         Subtitle: book.volumeInfo.subtitle,
         Author: book.volumeInfo.authors,
         Description: book.volumeInfo.description,
-        Image: book.volumeInfo.imageLinks.thumbnail,
+        Image: book.volumeInfo.imageLinks.smallThumbnail,
         ID: book.id,
         Link: book.volumeInfo.infoLink
       }
