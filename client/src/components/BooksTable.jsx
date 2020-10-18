@@ -1,7 +1,9 @@
 import React from 'react';
-import { Button, Card, Container } from 'react-bootstrap';
+import { Button, ButtonGroup, Card, Container } from 'react-bootstrap';
+import './styles.css'
 
-export default function BooksTable(props) {
+const BooksTable = (props) => {
+
   return (
     <Container fluid>
       {props.books.map((book) => (
@@ -15,15 +17,37 @@ export default function BooksTable(props) {
             </Card.Title>
             <Card.Text> Author: {book.Author}</Card.Text>
             <Card.Text> Desciption: {book.Description} </Card.Text>
-            <Button variant="primary" className="mr-2" onClick={() => props.handleSaveBtn(book)}>
-              Save
-            </Button>
-            <Button variant="link" target="_blank" href={book.Link}>
-             View Details 
-            </Button>
           </Card.Body>
+          <ButtonGroup>
+            {book._id ? (
+              <div>
+                <Button
+                  onClick={() => props.deleteButton(book._id)}
+                  variant="danger"
+                  className="mr-2"
+                >
+                  Delete
+                </Button>
+              </div>
+            ) : (
+              <div>
+                <Button
+                  variant="primary"
+                  className="mr-2"
+                  onClick={() => props.handleSaveBtn(book)}
+                >
+                  Save
+                </Button>
+              </div>
+            )}
+            <Button variant="link" target="_blank" href={book.Link}>
+              View Details
+            </Button>
+          </ButtonGroup>
         </Card>
       ))}
     </Container>
   );
-}
+};
+
+export default BooksTable;
