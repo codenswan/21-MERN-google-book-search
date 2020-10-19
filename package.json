@@ -12,7 +12,8 @@
 		"start:prod": "node server.js",
 		"start:dev": "npx concurrently \"npx nodemon --ignore 'client/*'\" \"npm run client\"",
 		"client": "cd client && npm run start",
-		"pretest": "eslint --ignore-path .gitignore ."
+		"pretest": "eslint --ignore-path .gitignore .",
+		"build":"cd client && npm run build"
 	},
 	"keywords": [],
 	"author": "",
