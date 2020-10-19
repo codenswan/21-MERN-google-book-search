@@ -16,7 +16,7 @@
 		"start:dev": "npx concurrently \"npx nodemon --ignore 'client/*'\" \"npm run client\"",
 		"client": "cd client && npm run start",
 		"pretest": "eslint --ignore-path .gitignore .",
-		"build":"cd client && npm run build"
+		"build":"cd client && npm install && npm run build"
 	},
 	"keywords": [],
 	"author": "",
