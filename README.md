@@ -1,6 +1,6 @@
 # 21-MERN-Google-Books-Search
 
-This project was developed by [codenswan](https://github.com/codenswan). You can find it at [here].(https://w21-google-book-search.herokuapp.com/)&nbsp;
+This project was developed by [codenswan](https://github.com/codenswan). You can find it at [here.](https://w21-google-book-search.herokuapp.com/)&nbsp;
 
 ---
 
