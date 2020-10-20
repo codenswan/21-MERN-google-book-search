@@ -20,7 +20,7 @@ Backend built with Express. Front end built with react and bootstrap. Mongo data
 
 ## Usage:
 
-User searches for books based on key words from either title or author. Search results are accessed via Search page. User can saved favourite books to a mongo database which are loaded when Saved page is accessed..&nbsp;
+User searches for books based on key words from either title or author. Search results are accessed via Search page. User can saved favourite books to a mongo database which are loaded when Saved page is accessed.&nbsp;
 
 <img src="Screen%20Shot%202020-10-20%20at%203.52.13%20pm.png" width="1050"/>
 
