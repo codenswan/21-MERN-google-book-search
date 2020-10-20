@@ -23,6 +23,7 @@ let booksSchema = new Schema({
   Title: {
     type: String,
   },
+  //* "Saved" added here as an additional method (alongside id) to display saved books in the single Bookstable component 
   Saved: {
     type: Boolean,
     default: true,

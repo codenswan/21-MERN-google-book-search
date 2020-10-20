@@ -5,11 +5,13 @@ require('dotenv').config();
 
 const API_KEY = process.env.API_KEY;
 
+//* seach page route accesses the google books api search
 router.get('/search', async (req, res) => {
   try {
     let results = await axios.get(
       `https://www.googleapis.com/books/v1/volumes?q=${req.query.title}&key=${API_KEY}`
     );
+    //* search results are formatted on the backend so front end only recieves specific information
     let formattedResults = await results.data.items.map(book => {
       return {
         Title: book.volumeInfo.title,
